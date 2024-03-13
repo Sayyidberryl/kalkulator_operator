@@ -81,6 +81,7 @@
                                 echo "<div class='mt-3 text-center fs-5 fw-bold'>Tidak bisa membagi dengan angka nol !</div>";
                                 break;
                             }
+                            break;
                         case '*':
                             $hasil = $bilangan1 * $bilangan2;
                             break;
@@ -91,7 +92,7 @@
                     }
 
                 }
-                echo "<div class='mt-3 text-center fs-5 fw-bold '>Hasil: $hasil </div>";
+                echo "<div class='mt-3 text-center fs-5 fw-bold '>Hasil: $bilangan1 $operator $bilangan2 = $hasil </div>";
 
 
 
