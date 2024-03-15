@@ -23,7 +23,7 @@
 
     .kalkulator {
         height: 450px;
-        width: 500px;
+        width: 550px;
         box-sizing: border-box;
         border-radius: 10px;
     }
@@ -34,17 +34,20 @@
         <div class="kalkulator p-5 shadow-lg p-3 mb-5">
             <p class="text-center fs-5 fw-bold">Kalkulator operator</p>
             <form action="" method="post">
-                <div>
-                    <label for="bil1">Bilangan 1</label>
-                    <input type="number" class="form-control" name="bil1" id="bil1">
-                </div>
+                <div class="bungkus d-flex justify-content-between">
+                    <div >
+                        <label for="bil1">Angka 1</label>
+                        <input type="number" class="form-control" name="bil1" id="bil1">
+                    </div>
 
-                <div>
-                    <label for="bil2">Bilangan 2</label>
-                    <input type="number" class="form-control" name="bil2" id="bil2">
+                    <div>
+                        <label for="bil2">Angka 2</label>
+                        <input type="number" class="form-control" name="bil2" id="bil2">
+                    </div>
                 </div>
-
-                <select class="form-select mt-3" name="operator" aria-label="Default select example">
+                <div class="coba mt-3"><label for="bil1 ">Pilih operator</label></div>
+                
+                <select class="form-select mt-1" name="operator" aria-label="Default select example">
                     <option selected>Pilih operator</option>
                     <option value="+">+</option>
                     <option value="-">-</option>
