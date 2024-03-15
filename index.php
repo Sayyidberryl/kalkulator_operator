@@ -30,12 +30,12 @@
 </style>
 
 <body>
-    <div class="main d-flex flex-column justify-content-center align-items-center">
-        <div class="kalkulator p-5 shadow-lg p-3 mb-5">
-            <p class="text-center fs-5 fw-bold">Kalkulator operator</p>
+    <div class="container main d-flex flex-column justify-content-center align-items-center ">
+        <div class="container kalkulator p-5 shadow-lg p-3 mb-5">
+            <p class="container text-center fs-5 fw-bold">Kalkulator operator</p>
             <form action="" method="post">
-                <div class="bungkus d-flex justify-content-between">
-                    <div >
+                <div class="container bungkus d-flex justify-content-between">
+                    <div>
                         <label for="bil1">Angka 1</label>
                         <input type="number" class="form-control" name="bil1" id="bil1">
                     </div>
@@ -45,9 +45,9 @@
                         <input type="number" class="form-control" name="bil2" id="bil2">
                     </div>
                 </div>
-                <div class="coba mt-3"><label for="bil1 ">Pilih operator</label></div>
-                
-                <select class="form-select mt-1" name="operator" aria-label="Default select example">
+                <div class="container coba mt-3"><label for="bil1 ">Pilih operator</label></div>
+
+                <select class="container form-select mt-1" name="operator" aria-label="Default select example">
                     <option selected>Pilih operator</option>
                     <option value="+">+</option>
                     <option value="-">-</option>
@@ -56,7 +56,7 @@
                 </select>
 
                 <div>
-                    <button class="btn btn-success form-control mt-3" type="submit" name="hitung">Hitung !</button>
+                    <button class="container btn btn-success form-control mt-3" type="submit" name="hitung">Hitung !</button>
                 </div>
 
             </form>
@@ -64,7 +64,7 @@
             $hasil = "";
             if (isset($_POST["hitung"])) {
                 if ($_POST["bil1"] == '' || $_POST["bil2"] == '') {
-                    echo "<div class='mt-3 text-center fs-5 fw-bold '>Silahkan isi kedua bilangan !</div>";
+                    echo "<div class='container mt-3 text-center fs-5 fw-bold '>Silahkan isi kedua bilangan !</div>";
                 } else {
                     $bilangan1 = $_POST['bil1'];
                     $bilangan2 = $_POST['bil2'];
@@ -81,7 +81,7 @@
                             if ($bilangan2 != 0) {
                                 $hasil = $bilangan1 / $bilangan2;
                             } else {
-                                echo "<div class='mt-3 text-center fs-5 fw-bold'>Tidak bisa membagi dengan angka nol !</div>";
+                                echo "<div class='container mt-3 text-center fs-5 fw-bold'>Tidak bisa membagi dengan angka nol !</div>";
                                 break;
                             }
                             break;
@@ -90,12 +90,12 @@
                             break;
 
                         default:
-                            echo "<div class='mt-3 text-center fs-5 fw-bold '>Mohon pilih operator terlebih dahulu.</div>";
+                            echo "<div class='container mt-3 text-center fs-5 fw-bold '>Mohon pilih operator terlebih dahulu.</div>";
                             break;
                     }
 
                 }
-                echo "<div class='mt-3 text-center fs-5 fw-bold '>Hasil: $bilangan1 $operator $bilangan2 = $hasil </div>";
+                echo "<div class='container mt-3 text-center fs-5 fw-bold '>Hasil: $bilangan1 $operator $bilangan2 = $hasil </div>";
 
 
 
